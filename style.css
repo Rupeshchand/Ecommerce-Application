@@ -45,3 +45,40 @@ a button{
     display: inline-flex;
     gap: 10px;
 }
+.banner-image{
+    margin-left: 19px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+figure{
+    position: relative;
+}
+.figcaptionOne{
+    position: absolute;
+    top: 38%;
+    left: 8%;
+    color: #fff;
+    font-weight: lighter;
+    font-size: 18px;
+}
+.figcaptionTwo{
+    position: absolute;
+    top:46%;
+    left:8%;
+    color:#fff;
+    font-weight: lighter;
+    font-size: 20px;
+}
+.lp-title{
+ text-align: center;
+ font-weight: lighter; 
+ margin-bottom: 10px;  
+}
+/* .card{
+    border: 1px solid black;
+    width: fit-content;
+} */
+.card img{
+    width:150px;
+    height:150px;
+}
