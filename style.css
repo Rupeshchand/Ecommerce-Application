@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+}
+.header-container{
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    background-color: #f9f8f8;
+    justify-content: space-between;
+}
+a{
+    text-decoration: none;
+}
+a h1{
+    color: black;
+    margin-left: 30px;
+}
+.header-titles-container{
+    display: flex;
+    gap:20px;
+}
+.header-titles-row{
+    display: flex;
+    gap:20px;
+}
+.header-titles-row a{
+    color:grey;  
+}
+.header-titles-row a:hover{
+    color: black;
+}
+.headerButtons{
+    display: flex;
+    gap:10px;
+}
+a button{
+    padding: 10px;
+    background-color: white;
+    border-radius: 5px;
+    display: inline-flex;
+    gap: 10px;
+}
