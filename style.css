@@ -89,8 +89,10 @@ figure{
 }
 .lp-container{
     position: relative;
+    left:5%;
     margin: 30px;
-    display: inline-block;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 .lp-row{
     display: grid;
