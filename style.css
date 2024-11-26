@@ -87,10 +87,7 @@ figure{
     margin-top: 80px;
     margin-bottom: 10px;
 }
-.lp-title-hr{
-    margin-bottom: 70px;
-}
-.lprod-title-hr{
+.lprod-title-hr, .lp-title-hr{
     position: relative;
     width: 94%;
     left: 44px;
