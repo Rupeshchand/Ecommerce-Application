@@ -163,16 +163,19 @@ label, #login-new{
     position: relative;
     left:-74px;
 }
-#email, #password{
+#email, #password , #fullName{
     padding: 10px;
     text-align: left;
     width: 180%;
     border-radius: 4px;
     border: 2px solid rgb(196, 194, 194)
 }
-#email:focus, #password:focus{
+#email:focus, #password:focus, #fullName:focus{
     border: 3px solid rgb(69, 69, 254) !important;
     outline: none;
+}
+#login-new a{
+    text-decoration: underline;
 }
 #login-button{
     padding: 10px;
