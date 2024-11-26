@@ -76,11 +76,24 @@ figure{
     font-size: 20px;
 }
 .lp-title{
- text-align: center;
- font-weight: lighter; 
- margin-bottom: 30px;  
+    text-align: center;
+    font-weight: lighter; 
+    margin-bottom: 30px;  
+}
+.lprod-title{
+    text-align: center;
+    font-size: 40px;
+    font-weight: lighter;
+    margin-top: 80px;
+    margin-bottom: 10px;
 }
 .lp-title-hr{
+    margin-bottom: 70px;
+}
+.lprod-title-hr{
+    position: relative;
+    width: 94%;
+    left: 44px;
     margin-bottom: 70px;
 }
 .lpButtons{
@@ -89,10 +102,7 @@ figure{
 }
 .lp-container{
     position: relative;
-    left:5%;
     margin: 30px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
 }
 .lp-row{
     display: grid;
