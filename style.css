@@ -199,6 +199,13 @@ label, #login-new{
     justify-content: center;
     border-radius: 4px;
 }
+#opTitle{
+    text-align: center;
+    font-size: 30px;
+    font-weight: lighter;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
 #cartTitle{
     position: absolute;
     top:30%;
@@ -214,7 +221,34 @@ label, #login-new{
     border-radius: 8px;
     font-size: 15px;
 }
-
-
+.op-title-hr{
+    position: relative;
+    width: 94%;
+    left: 44px;
+    margin-bottom: 20px;
+}
+#cardContainer{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+.cardOne{
+    border: 1px solid;
+    width: fit-content;
+    border-color: #a8a4a4;
+    border-radius: 4px;
+}
+.card-tittle{
+    padding: 20px;
+    text-align: center;
+    font-size: 15px;
+}
+.about-us{
+    text-align: justify;
+    margin: 50px;
+    font-weight: lighter;
+    font-size: 20px;
+  
+}
 
 
