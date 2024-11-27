@@ -52,7 +52,8 @@ a h1{
     color: white;
 }
 .banner-image{
-    margin-left: 19px;
+    margin-left: 14px;
+    width:98%;
     border-radius: 5px;
     margin-bottom: 30px;
 }
