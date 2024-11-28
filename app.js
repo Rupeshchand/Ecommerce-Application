@@ -1,6 +1,5 @@
 // fetching data into home page
 let latestProducts = document.querySelector(".lp-row");
-console.log(latestProducts);
 let fetchedData = [];
 
 fetch("https://fakestoreapi.com/products").then(res => res.json()).then((data)=>{
@@ -54,24 +53,32 @@ const womenCloth = document.querySelector("#women-button")
 const jewelery = document.querySelector("#jewel-button")
 const electronics = document.querySelector("#ele-button")
 
-all.addEventListener("click",()=>{
-    displayProducts(fetchedData)
-})
-menCloth.addEventListener("click",()=>{
-    let filterMen = fetchedData.filter((ele)=>{
-        return ele.category == "men's clothing"
-    })
-    displayProducts(filterMen)
-})
-womenCloth.addEventListener("click",()=>{
-    let filterWomen = fetchedData.filter((ele)=> ele.category == "women's clothing")
-    displayProducts(filterWomen)
-})
-jewelery.addEventListener("click",()=>{
-    let filterJewelery = fetchedData.filter((ele)=> ele.category == "jewelery")
-    displayProducts(filterJewelery)
-})
-electronics.addEventListener("click",()=>{
-    const filterElectronics = fetchedData.filter((ele)=> ele.category == "electronics")
-    displayProducts(filterElectronics)
-})
+// all.addEventListener("click",()=>{
+//     displayProducts(fetchedData)
+// })
+// menCloth.addEventListener("click",()=>{
+//     let filterMen = fetchedData.filter((ele)=>{
+//         return ele.category == "men's clothing"
+//     })
+//     displayProducts(filterMen)
+// })
+// womenCloth.addEventListener("click",()=>{
+//     let filterWomen = fetchedData.filter((ele)=> ele.category == "women's clothing")
+//     displayProducts(filterWomen)
+// })
+// jewelery.addEventListener("click",()=>{
+//     let filterJewelery = fetchedData.filter((ele)=> ele.category == "jewelery")
+//     displayProducts(filterJewelery)
+// })
+// electronics.addEventListener("click",()=>{
+//     const filterElectronics = fetchedData.filter((ele)=> ele.category == "electronics")
+//     displayProducts(filterElectronics)
+// })
+
+//toggle between login and register page
+const loginPage = document.querySelector("#login-page");
+const regstPage = document.querySelector("#register-page")
+console.log(loginPage);
+console.log(regstPage);
+
+

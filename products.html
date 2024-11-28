@@ -7,7 +7,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <title>Ecommerce Application</title>
 </head>
-<body>
+<body class="products-page">
     <header>
         <nav class="header-container">
             <a href="index.html"><h1>Ecommerce</h1></a>
@@ -26,22 +26,26 @@
             </div>
         </nav>
     </header>
-    <h1 class="lprod-title">Latest Products</h1>
-    <hr class = "lp-title-hr">
-    <div class="lpButtons">
-        <a href="login.html"><button class="lp-buttons">All</button></a>
-        <a href="register.html"><button class="lp-buttons"></i> Men's Clothing</button></a>
-        <a href="cart.html"><button class="lp-buttons"></i>Women's Clothing</button></a>
-        <a href="cart.html"><button class="lp-buttons"></i>Jewelery</button></a>
-        <a href="cart.html"><button class="lp-buttons"></i>Electronics</button></a>
-    </div>
-    <div class="lp-container">
-        <div class="lp-row">
-            
+    <section>
+        <h1 class="lp-title">Latest Products</h1>
+        <hr class = "lp-title-hr">
+        <div class="lpButtons">
+            <button class="lp-buttons" id="all-button">All</button>
+            <button class="lp-buttons" id="men-button"> Men's Clothing</button>
+            <button class="lp-buttons" id="women-button">Women's Clothing</button>
+            <button class="lp-buttons" id="jewel-button">Jewelery</button>
+            <button class="lp-buttons" id="ele-button">Electronics</button>
         </div>
-    </div>
+        <div class="lp-container">
+            <div class="lp-row">
+                
+            </div>
+        </div>    
+    </section>
     <br> <br> <br>
-    <p class="❤️">Made with ❤️ by <span style="text-decoration: underline; font-size:20px;">Rupesh Chand</span></p>
+    <footer>
+        <p class="❤️">Made with ❤️ by <span style="text-decoration: underline; font-size:20px;">Rupesh Chand</span></p>
+    </footer>
     <script src="app.js"></script>
 </body>
 </html>

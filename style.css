@@ -7,11 +7,16 @@ body{
     font-family: sans-serif;
 }
 .header-container{
+    position: relative;
+    top:0;
     padding: 25px;
     display: flex;
+    z-index: 1;
+    position: fixed;
     align-items: center;
     background-color: #f9f8f8;
     justify-content: space-between;
+    width: 100%;
 }
 a{
     text-decoration: none;
@@ -52,17 +57,16 @@ a h1{
     color: white;
 }
 .banner-image{
+    position: absolute;
+    top: 70px;
     margin-left: 14px;
     width:98%;
     border-radius: 5px;
     margin-bottom: 30px;
 }
-figure{
-    position: relative;
-}
 .figcaptionOne{
     position: absolute;
-    top: 38%;
+    top: 318px;
     left: 8%;
     color: #fff;
     font-weight: lighter;
@@ -70,16 +74,23 @@ figure{
 }
 .figcaptionTwo{
     position: absolute;
-    top:46%;
+    top:370px;
     left:8%;
     color:#fff;
     font-weight: lighter;
     font-size: 20px;
 }
+.latest-products{
+    margin-top: 780px;
+}
 .lp-title{
     text-align: center;
     font-weight: lighter; 
     margin-bottom: 30px;  
+    font-size: 40px;
+}
+.products-page, .about-page, .contact-page, .login-page, .register-page, .cart-page{
+    margin-top: 150px;
 }
 .lprod-title{
     text-align: center;
@@ -141,6 +152,7 @@ figure{
 }
 .❤️{
     text-align: center;
+    margin-top: 100px;
     margin-bottom: 150px;
 }
 .login-title{
@@ -178,7 +190,7 @@ label, #login-new{
 #login-new a{
     text-decoration: underline;
 }
-#login-button{
+#login-button, #register-button{
     padding: 10px;
     border-radius: 4px;
     border: none;
