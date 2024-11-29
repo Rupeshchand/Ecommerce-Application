@@ -18,16 +18,19 @@ body{
     justify-content: space-between;
     width: 100%;
 }
-a{
+#headTitle{
     text-decoration: none;
-}
-a h1{
     color: black;
     margin-left: 30px;
+}
+#logo{
+    color: black;
+    text-decoration: none;
 }
 .header-titles-container{
     display: flex;
     gap:20px;
+    font-size: 20px;
 }
 .header-titles-row{
     display: flex;
@@ -35,6 +38,7 @@ a h1{
 }
 .header-titles-row a{
     color:grey;  
+    text-decoration: none;
 }
 .header-titles-row a:hover{
     color: black;
@@ -48,6 +52,7 @@ a h1{
     background-color: white;
     border-radius: 5px;
     display: inline-flex;
+    align-items: center;
     gap: 10px;
     font-size: 15px;
     cursor: pointer;
@@ -58,27 +63,27 @@ a h1{
 }
 .banner-image{
     position: absolute;
-    top: 70px;
+    top: 107px;
     margin-left: 14px;
     width:98%;
     border-radius: 5px;
     margin-bottom: 30px;
 }
-.figcaptionOne{
+#banner-title{
+    font-size: 60px;
     position: absolute;
-    top: 318px;
-    left: 8%;
+    top: 332px;
+    left: 3%;
     color: #fff;
     font-weight: lighter;
-    font-size: 18px;
 }
-.figcaptionTwo{
+#banner-para{
     position: absolute;
-    top:370px;
-    left:8%;
+    top:407px;
+    left:3%;
     color:#fff;
     font-weight: lighter;
-    font-size: 20px;
+    font-size: 32px;
 }
 .latest-products{
     margin-top: 780px;
@@ -87,7 +92,7 @@ a h1{
     text-align: center;
     font-weight: lighter; 
     margin-bottom: 30px;  
-    font-size: 40px;
+    font-size: 48px;
 }
 .products-page, .about-page, .contact-page, .login-page, .register-page, .cart-page{
     margin-top: 150px;
@@ -109,11 +114,11 @@ a h1{
     text-align: center;
     margin-bottom: 30px;
 }
-.lp-container{
+.container{
     position: relative;
     margin: 30px;
 }
-.lp-row{
+.row{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 8px 0px;
@@ -129,7 +134,7 @@ a h1{
     line-height: 2;
 }
 .card img{
-    width: 350px;
+    width: 332px;
     height:350px;
     padding: 10px;
 }
@@ -186,9 +191,6 @@ label, #login-new{
 #email:focus, #password:focus, #fullName:focus,#name:focus, #message:focus{
     border: 3px solid rgb(69, 69, 254) !important;
     outline: none;
-}
-#login-new a{
-    text-decoration: underline;
 }
 #login-button, #register-button{
     padding: 10px;

@@ -1,5 +1,5 @@
 // fetching data into home page
-let latestProducts = document.querySelector(".lp-row");
+let latestProducts = document.querySelector(".row");
 let fetchedData = [];
 
 fetch("https://fakestoreapi.com/products").then(res => res.json()).then((data)=>{
@@ -14,9 +14,10 @@ function displayProducts(data){
     latestProducts.innerHTML = "";
     data.forEach((ele,i)=>{
         let cards = `
+        <div class="col-lg-4 col-md-6">
             <div class="card">
-                <div class="card-body">
                 <img src="${ele.image}" class="card-img-top" alt="images">
+                <div class="card-body">
                     <h5 class="card-title">${ele.title}</h5>
                     <p class="card-text">${ele.description}</p>
                     <hr>
@@ -28,6 +29,7 @@ function displayProducts(data){
                     </div>
                 </div>
             </div>
+        </div>
         `
         latestProducts.insertAdjacentHTML("beforeend",cards)
         document.querySelectorAll(".card-title").forEach((title)=>{
@@ -75,10 +77,7 @@ const electronics = document.querySelector("#ele-button")
 //     displayProducts(filterElectronics)
 // })
 
-//toggle between login and register page
-const loginPage = document.querySelector("#login-page");
-const regstPage = document.querySelector("#register-page")
-console.log(loginPage);
-console.log(regstPage);
+
+
 
 
