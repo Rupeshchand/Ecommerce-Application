@@ -256,7 +256,7 @@ a{
     }
     .navbar ul{
         z-index: 1;
-
+        transform: translate(191px, 10px);
     }
     body{
         overflow-x: hidden;
@@ -281,7 +281,7 @@ a{
     }
     .d-flex{
         position: absolute;
-        transform: translate(469px, -35px);
+        transform: translate(-322px, 6px);
     }
     .img-fluid{
         width: 98% !important;
@@ -679,6 +679,101 @@ a{
     }
 }
 @media screen and (min-width:1440px) {
+    .uml-productcontainer{
+        display: flex;
+        overflow-x: hidden;
+        white-space: nowrap;
+        column-gap: 20px;
+        padding: 10px;
+    }
+
+    .uml-title{
+        width: fit-content;
+        font-size: 26px !important;
+        font-weight: bold !important;
+        margin-top: 35px !important;
+        margin-bottom: 20px !important;
+    }
+    .prod{
+        display: inline-block;
+        border: 1px solid;
+        padding: 36px;
+        height: fit-content;
+        border-radius: 4px;
+        animation: slide 10s infinite linear;
+    }
+    @keyframes slide{
+        from{
+            transform: translateX(0);
+        }
+        to{
+            transform: translateX(-100%);
+        }
+    }
+    .sliderImg{
+        width: 200px;
+        height: 300px;
+    }
+    .product-details{
+        display: flex;
+        column-gap: 133px;
+        transform: translate(28px, 201px);
+    }
+    .pd-img{
+        width:400px;
+        height:400px;
+    }
+    .pd-category{
+        color: grey;
+        font-size: 20px;
+    }
+    .pd-part2{
+        margin-right: 80px;
+    }
+    .pd-title{
+        padding: 0;
+        font-size: 38px !important;
+        transform: translate(0px, 24px);
+        text-align: left !important;
+        margin-bottom: 0 !important;
+    }
+    .pd-rating{
+        font-size: 20px;
+        color: black;
+        transform: translate(4px, -26px);
+    }
+    .pd-price{
+        transform: translate(2px, -32px);
+        font-size: 35px;
+    }
+    .pd-desc{
+        font-size: 20px;
+        transform: translate(5px, -37px);
+    }
+    .pd-btns{
+        font-size: 15px !important;
+        display: flex;
+        gap: 15px;
+        width: fit-content;
+        transform: translate(5px, -37px);
+    }
+    .pd-btnTwo{
+        padding: 7px;
+        border-radius: 4px;
+        font-size: 15px;
+    }
+    .go-cart{
+        padding: 7px;
+        border-radius: 4px;
+        border: 0;
+        background-color: black;
+        color: white;
+        font-size: 16px;
+    }
+    .umayLike{
+        width: fit-content;
+        transform: translate(55px, 261px);
+    }
     #cartContainer{
         left:39px !important
     }
@@ -816,7 +911,7 @@ a{
     }
     .btnOne, .btnTwo{
         margin-top: unset !important;
-        font-size: 18px !important;
+        font-size: 16px !important;
         padding: 10px !important;
         transform: translate(34px, 10px);
     }
