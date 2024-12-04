@@ -56,10 +56,11 @@ body{
 a{
     text-decoration: none !important;
 }
-.d-flex{
+/* .nav-buttons{
+    display: flex;
     gap:10px;
     transform: translateX(176%);
-}
+} */
 
 @media screen and (min-width:425px) {
     .login, .regitser{
@@ -75,16 +76,31 @@ a{
     }
     .container{
         max-width: 1320px;
-        padding: 148px !important
+        padding: 148px !important;
+        background-color: #f8f8f8 !important;
+    }
+   .about-title{
+        font-size: 37px !important;
+        transform: translate(170px, -22px) !important;
+   }
+   .lp-title{
+        margin-top: 50px !important;
+        font-size: 37px !important;
+        transform: translate(31px, 52px) !important;   
     }
     .cart-login-title{
+        transform: translate(-67px, 10px);
         font-weight: lighter;
-        font-size: 50px;
+        font-size: 30px;
+        width:370% !important
     }
     .continue-shop{
         background-color: #f8f8f8!important;
+        transform: translate(-10px, 10px);
+        width:fit-content;
         color: black !important;
         border: 1px solid !important;
+        font-size: 15px !important;
     }
     .navbarBtn{
         font-size: 15px !important;
@@ -114,7 +130,7 @@ a{
         text-align: left;
     }
     .text-end{
-        transform: translate(312px, -5px);
+        transform: translate(54px, -13px);        
         display: flex;
     }
     .cart-title{
@@ -129,9 +145,23 @@ a{
         font-size: 40px !important;
         transform: translate(558px, -44px) !important;
     }
+    .op-title-hr{
+        transform: translate(-25px,10px) !important;
+    }
+    #cardContainer{
+        display: flex;
+        flex-direction: column;
+        transform: translate(120px,10px);
+    }
+    .contact-us{
+        transform: translate(-546px, 10px);
+    }
     .login-title-hr{
         left: 10px !important;
         transform: translate(550px, 2px);
+    }
+    .slider-title{
+        font-size: 15px;
     }
     .cart-title-hr{
         left: 10px !important;
@@ -149,11 +179,13 @@ a{
     }
     .uml-productcontainer{
         display: flex;
+        flex-direction: column;
         overflow-x: hidden;
         white-space: nowrap;
         position: relative;
-        column-gap: 20px;
+        row-gap: 20px;
         padding: 10px;
+        width: fit-content;
     }
 
     .uml-title{
@@ -190,38 +222,41 @@ a{
     }
     .product-details{
         display: flex;
-        column-gap: 133px;
+        flex-direction: column;
+        row-gap: 133px;
         transform: translate(28px, 201px);
     }
     .pd-img{
-        width:400px;
-        height:400px;
+        width:300px;
+        height:300px;
+        transform: translateX(30px);
     }
     .pd-category{
         color: grey;
-        font-size: 20px;
+        font-size: 15px;
     }
     .pd-part2{
         margin-right: 80px;
+        margin-bottom: 30px;
     }
     .pd-title{
         padding: 0;
-        font-size: 38px !important;
+        font-size: 28px !important;
         transform: translate(0px, 24px);
         text-align: left !important;
         margin-bottom: 0 !important;
     }
     .pd-rating{
-        font-size: 20px;
+        font-size: 15px;
         color: black;
         transform: translate(4px, -26px);
     }
     .pd-price{
         transform: translate(2px, -32px);
-        font-size: 35px;
+        font-size: 30px;
     }
     .pd-desc{
-        font-size: 20px;
+        font-size: 15px;
         transform: translate(5px, -37px);
     }
     .pd-btns{
@@ -246,7 +281,7 @@ a{
     }
     .umayLike{
         width: fit-content;
-        transform: translate(55px, 261px);
+        transform: translate(35px, 280px);
     }
     .heart{
         width: fit-content;
@@ -292,9 +327,10 @@ a{
     .header-buttons span{
         display: none;
     }
-    .d-flex{
+    .nav-buttons{
+        display: flex;
         column-gap:10px !important;
-        transform: translate(-650px, 80px);
+        transform: translate(-657px, 143px);    
     }
     .img-fluid{
         width: 98% !important;
@@ -397,12 +433,14 @@ a{
         margin-top: 40px !important;
         margin-bottom: 100px !important;
     }
-    
+    .register{
+        transform: translate(-550px, 10px);
+    }
     #login-form{
         display: flex;
         flex-direction: column;
         align-items: center;
-        transform: translateX(650px);
+        transform: translateX(700px);
         line-height: 1;
         width: fit-content;
     }
@@ -418,16 +456,31 @@ a{
     }
     .container{
         max-width: 1320px;
-        padding: 148px !important
+        padding: 148px !important;
+        background-color: #f8f8f8 !important;
+    }
+   .about-title{
+        font-size: 37px !important;
+        transform: translate(170px, -22px) !important;
+   }
+   .lp-title{
+        margin-top: 50px !important;
+        font-size: 37px !important;
+        transform: translate(31px, 52px) !important;   
     }
     .cart-login-title{
+        transform: translate(-67px, 10px);
         font-weight: lighter;
-        font-size: 50px;
+        font-size: 30px;
+        width:fit-content !important
     }
     .continue-shop{
         background-color: #f8f8f8!important;
+        transform: translate(-10px, 10px);
+        width:fit-content;
         color: black !important;
         border: 1px solid !important;
+        font-size: 15px !important;
     }
     .navbarBtn{
         font-size: 15px !important;
@@ -457,7 +510,7 @@ a{
         text-align: left;
     }
     .text-end{
-        transform: translate(312px, -5px);
+        transform: translate(54px, -13px);
         display: flex;
     }
     .cart-title{
@@ -471,6 +524,17 @@ a{
         font-weight: lighter;
         font-size: 40px !important;
         transform: translate(558px, -44px) !important;
+    }
+    .op-title-hr{
+        transform: translate(-25px,10px) !important;
+    }
+    #cardContainer{
+        display: flex;
+        flex-direction: column;
+        transform: translate(120px,10px);
+    }
+    .contact-us{
+        transform: translate(-546px, 10px);
     }
     .login-title-hr{
         left: 10px !important;
@@ -628,9 +692,10 @@ a{
     .header-buttons span{
         display: none;
     }
-    .d-flex{
+    .nav-buttons{
+        display: flex;
         column-gap:10px !important;
-        transform: translate(-650px, 0px);
+        transform: translate(-657px, 143px);
     }
     .img-fluid{
         width: 98% !important;
@@ -733,12 +798,14 @@ a{
         margin-top: 40px !important;
         margin-bottom: 100px !important;
     }
-    
+    .register{
+        transform: translate(-550px, 10px);
+    }
     #login-form{
         display: flex;
         flex-direction: column;
         align-items: center;
-        transform: translateX(650px);
+        transform: translateX(700px);
         line-height: 1;
         width: fit-content;
     }
@@ -754,7 +821,8 @@ a{
     }
     .container{
         max-width: 1320px;
-        padding: 148px !important
+        background-color: #f8f8f8 !important;
+        text-align: center;
     }
     .cart-login-title{
         font-weight: lighter;
@@ -789,7 +857,7 @@ a{
         text-align: left;
     }
     .text-end{
-        transform: translate(312px, -5px);
+        transform: translate(54px, -13px);
         display: flex;
     }
     .cart-title{
@@ -961,8 +1029,8 @@ a{
     .header-buttons span{
         display: block;
     }
-    .d-flex{
-        position: absolute;
+    .nav-buttons{
+        display: flex;
         column-gap:10px !important;
         transform: translate(-300px, 0px);
     }
@@ -1088,7 +1156,8 @@ a{
     }
     .container{
         max-width: 1320px;
-        padding: 148px !important
+        background-color: #f8f8f8 !important;
+        text-align: center;
     }
     .cart-login-title{
         font-weight: lighter;
@@ -1123,7 +1192,7 @@ a{
         text-align: left;
     }
     .text-end{
-        transform: translate(312px, -5px);
+        transform: translate(54px, -13px);
         display: flex;
     }
     .cart-title{
@@ -1295,8 +1364,8 @@ a{
     .header-buttons span{
         display: block;
     }
-    .d-flex{
-        position: absolute;
+    .nav-buttons{
+        display: flex;
         column-gap:10px !important;
         transform: translate(70px, 0px);
     }
@@ -1412,6 +1481,13 @@ a{
     }
 }
 @media screen and (min-width:1440px) {
+    .seperate{
+        display: flex !important;
+    }
+    .cart-list{
+        column-gap: 10px !important;
+        transform: translate(405px, 0px);
+    }
     .slider-title{
         font-size: 15px;
     }
@@ -1425,11 +1501,37 @@ a{
     }
     .container{
         max-width: 1320px;
-        padding: 148px !important
+        background-color: #f8f8f8 !important;
+        text-align: center;
     }
     .cart-login-title{
         font-weight: lighter;
         font-size: 50px;
+        transform: translate(300px,0);
+    }
+    .register{
+        transform: translate(0px, 10px);
+
+    }
+    .login, .contact-us{
+        transform: translate(0px, 10px);
+ 
+    }
+    .about-title{
+        width: fit-content;
+        transform: translate(600px,10px) !important;
+    }
+    .op-title-hr{
+        transform:translateX(8px) !important;
+    }
+    #cardContainer{
+        display: flex !important;
+        flex-direction: row;
+        transform: translate(-21px, 10px);
+    }
+    .lp-title{
+        font-size: 47px !important;
+        transform: translate(31px, 12px) !important;
     }
     .continue-shop{
         background-color: #f8f8f8!important;
@@ -1460,7 +1562,7 @@ a{
         text-align: left;
     }
     .text-end{
-        transform: translate(312px, -5px);
+        transform: translate(54px, -13px);
         display: flex;
     }
     .cart-title{
@@ -1613,7 +1715,7 @@ a{
     }
     .navbar ul{
         z-index: 1;
-        transform: translate(-150px, 2px);
+        transform: translate(0px, 2px);
     }
     body{
         overflow-x: hidden;
@@ -1624,10 +1726,6 @@ a{
         left: 10px;
         font-size: 35px;    
     }
-    .navbar-nav{
-        font-size: 20px !important;
-        transform: translate(550px, 0px);
-    }
     .header-buttons{
         transform: translateX(660px);
         font-size: px !important;
@@ -1635,8 +1733,8 @@ a{
     .header-buttons span{
         display: block;
     }
-    .d-flex{
-        position: absolute;
+    .nav-buttons{
+        display: flex;
         column-gap: 10px !important; 
         transform: translate(100px, 0px);
     }
@@ -1832,10 +1930,6 @@ a{
     display: flex;
     justify-content: center;
     column-gap: 27px;
-}
-.container{
-    position: relative;
-    margin: 30px;
 }
 .row{
     display: flex;

@@ -1,5 +1,5 @@
 //filtering the data based on category wise
-const latestProducts =  document.querySelector(".row")
+const latestProducts =  document.querySelector(".fetchProducts")
 const all = document.querySelector("#allButton")
 const menCloth = document.querySelector("#men-button")
 const womenCloth = document.querySelector("#women-button")
@@ -69,19 +69,9 @@ let fetchedData = [];
 
             })
             document.querySelectorAll(".btnTwo").forEach((button)=>{
-                button.addEventListener('click', (e) => { 
-                    console.log("Clicked element: ",e.target);
+                button.addEventListener('click', (e) => {
                     const productId =  parseInt(e.target.dataset.id,10)
-                    const product = fetchedData.find(item=>item.id == productId)
-                    if(product){
-                        console.log(`product added to cart: `, product);
-
-                        
-                    }
-                    else{
-                        console.log("not found", productId);
-                        
-                    }
+                    addToCart(productId);
                 });        
             
             })
@@ -162,19 +152,21 @@ let fetchedData = [];
 
     async function fetchProductById(productId) {
         try {
-            const response = await fetch("https://fakestoreapi.com/products/${productId}");
+            const response = await fetch(`https://fakestoreapi.com/products/${productId}`);
             if (!response.ok) {
                 throw new Error(`Error fetching product with ID: ${productId}`);
             }
-            return await response.json();
+            const product = await response.json();
+            return product;
         } catch (error) {
             console.error('Error fetching product:', error);
         }
       }
-      function addToCart(productId) {
+      async function addToCart(productId) {
           fetchProductById(productId).then((product) => {
-            if (!product) return; 
-              let cart = JSON.parse(localStorage.getItem('cart')) && [];
+              if (!product) return; 
+
+              let cart = JSON.parse(localStorage.getItem('cart')) || [];  
               const existingProduct = cart.find((item) => item.id === product.id);
 
               if (existingProduct) {
@@ -186,10 +178,11 @@ let fetchedData = [];
               localStorage.setItem('cart', JSON.stringify(cart)); 
               updateCartCount(); 
           });
-      }
+
+        }
 
       function updateCartCount() {
-          const cart = JSON.parse(localStorage.getItem('cart')) || [];
+          const cart = JSON.parse(localStorage.getItem('cart')) || [];          
           const totalQuantity = cart.reduce((sum, item) => sum + item.quantity, 0);
 
           const cartButton = document.querySelector('.cartCount');
@@ -199,10 +192,10 @@ let fetchedData = [];
           `;
       }
 
-
-
       function renderCartItems() {
           const cart = JSON.parse(localStorage.getItem('cart')) || [];
+          console.log(cart);
+          
           const itemListContainer = document.querySelector('.item-list');
           const totalItemsEl = document.getElementById('total-items');
           const subtotalEl = document.getElementById('subtotal');
@@ -227,7 +220,7 @@ let fetchedData = [];
               subtotal += item.price * item.quantity;
 
               const itemRow = document.createElement('div');
-              itemRow.className = 'row mb-3';
+              itemRow.className = 'row mb-3 seperate';
               itemRow.innerHTML = `
                   <div class="cart-list col-8 d-flex mb-3 ">
                       <img src="${item.image}" class="ms-2">
@@ -267,11 +260,8 @@ let fetchedData = [];
           }
       }
 
-
       document.addEventListener('DOMContentLoaded', () => {
           updateCartCount();
-
-          
           const itemListContainer = document.querySelector('.item-list');
           if (itemListContainer) {
               renderCartItems();
