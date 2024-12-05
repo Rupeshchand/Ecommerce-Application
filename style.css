@@ -892,6 +892,7 @@ a{
     }
     .uml-productcontainer{
         display: flex;
+        flex-direction: row;
         overflow-x: hidden;
         white-space: nowrap;
         column-gap: 20px;
@@ -927,6 +928,7 @@ a{
     }
     .product-details{
         display: flex;
+        flex-direction: row;
         column-gap: 133px;
         transform: translate(28px, 201px);
     }
@@ -1227,6 +1229,7 @@ a{
     }
     .uml-productcontainer{
         display: flex;
+        flex-direction: row;
         overflow-x: hidden;
         white-space: nowrap;
         column-gap: 20px;
@@ -1262,6 +1265,7 @@ a{
     }
     .product-details{
         display: flex;
+        flex-direction: row;
         column-gap: 133px;
         transform: translate(28px, 201px);
     }
@@ -1597,6 +1601,7 @@ a{
     }
     .uml-productcontainer{
         display: flex;
+        flex-direction: row;
         overflow-x: hidden;
         white-space: nowrap;
         column-gap: 20px;
@@ -1632,6 +1637,7 @@ a{
     }
     .product-details{
         display: flex;
+        flex-direction: row;
         column-gap: 133px;
         transform: translate(28px, 201px);
     }
