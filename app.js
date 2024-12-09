@@ -7,7 +7,7 @@ const jewelery = document.querySelector("#jewel-button")
 const electronics = document.querySelector("#ele-button")
 const url =  new URLSearchParams(window.location.search)
 const productId =  url.get('id')
-const rltdProducts =  document.querySelector(".uml-productcontainer ")
+const rltdProducts =  document.querySelector(".carousel-container ")
 
 let fetchedData = [];
 // let cart = []
@@ -32,10 +32,6 @@ let fetchedData = [];
                 }
                 if(latestProducts){
                     displayProducts(data)
-
-                }
-                if(rltdProducts){
-                    slideProducts(data)
 
                 }
             } catch (error) {
@@ -123,25 +119,6 @@ let fetchedData = [];
                     }
                 }
             }) 
-        }
-        function slideProducts(data){
-            if(rltdProducts){
-                rltdProducts.innerHTML="";
-                data.forEach((product)=>{
-                    let productSlider = `
-                    <div class="prod">
-                        <div class="prod-items">
-                            <img src="${product.image}" class="sliderImg" alt="${product.title}">
-                            <h3 class="slider-title">${product.title}</h3>
-                            <div class="card-buttons">
-                                <button class="btnOne" data-id="${product.id}">Details</button>
-                                <button class="btnTwo" data-id="${product.id}">Add to cart</button>
-                            </div>
-                        </div>
-                    </div>`
-                    rltdProducts.insertAdjacentHTML("beforeend",productSlider);
-                })
-            }
         }
         all?.addEventListener("click",()=> filterProducts("all"))
         menCloth?.addEventListener("click",()=> filterProducts("men's clothing"))
@@ -267,3 +244,55 @@ let fetchedData = [];
               renderCartItems();
           }
       });
+
+      async function fetchProductsforDetails() {
+        try {
+          const response = await fetch('https://fakestoreapi.com/products'); 
+          const products = await response.json();
+          displaySliderProducts(products);
+          startAutoScroll(); 
+        } catch (error) {
+          console.error("Error fetching products:", error);
+        }
+      }
+      
+    
+      function displaySliderProducts(products) {
+        const carousel = document.getElementById('carousel');
+        products.forEach(product => {
+          const productCard = `
+          <div class="product-card mx-2 mt-3" style="width: 18rem; ">
+                <img src="${product.image}" class="card-img-top p-2" alt="${product.title}">
+                <h5 class="card-title">${product.title.length > 15 ? product.title.slice(0, 15) + "..." : product.title}</h5>
+                <div class="mt-2">
+                    <a href="product-details.html?id=${product.id}" class="btn btn-dark ">Details</a>
+                    <button class="btn btn-dark " onclick="addToCart(${product.id},1)">Add to Cart</button>
+                </div>
+          `;
+          carousel.innerHTML += productCard;
+        });
+      
+       
+        const clone = carousel.innerHTML;
+        carousel.innerHTML += clone;
+      }
+      
+      
+      function startAutoScroll() {
+        const carousel = document.getElementById('carousel');
+        let scrollPosition = 0;
+      
+        setInterval(() => {
+          scrollPosition += 2; 
+          carousel.scrollLeft = scrollPosition;
+      
+          
+          if (scrollPosition >= carousel.scrollWidth / 2) {
+            scrollPosition = 0;
+          }
+        }, 40); 
+      }
+    
+     
+    
+    fetchProductsforDetails();
