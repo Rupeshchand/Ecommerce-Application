@@ -261,18 +261,17 @@ let fetchedData = [];
         const carousel = document.getElementById('carousel');
         products.forEach(product => {
           const productCard = `
-          <div class="product-card mx-2 mt-3" style="width: 18rem; ">
+            <div class="product-card mx-2 mt-3" style="width: 18rem; ">
                 <img src="${product.image}" class="card-img-top p-2" alt="${product.title}">
                 <h5 class="card-title">${product.title.length > 15 ? product.title.slice(0, 15) + "..." : product.title}</h5>
                 <div class="mt-2">
                     <a href="product-details.html?id=${product.id}" class="btn btn-dark ">Details</a>
                     <button class="btn btn-dark " onclick="addToCart(${product.id},1)">Add to Cart</button>
                 </div>
-          `;
+            </div>`;
           carousel.innerHTML += productCard;
         });
       
-       
         const clone = carousel.innerHTML;
         carousel.innerHTML += clone;
       }

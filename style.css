@@ -56,11 +56,6 @@ body{
 a{
     text-decoration: none !important;
 }
-/* .nav-buttons{
-    display: flex;
-    gap:10px;
-    transform: translateX(176%);
-} */
 
 @media screen and (min-width:425px) {
     .carousel-container {
@@ -85,7 +80,7 @@ a{
         width: 100% !important;
         height: 300px !important;
         border-radius: 8px;
-        transform: translate(-2px, -3px);
+        transform: translate(1px, 3px);
       }
       
     .login, .regitser{
@@ -206,7 +201,8 @@ a{
         width: fit-content;
         font-size: 26px !important;
         font-weight: bold !important;
-        margin-top: 35px !important;
+        margin-top: 300px !important;
+        transform: translateX(32px);
         margin-bottom: 20px !important;
     }
     .prod{
@@ -280,10 +276,6 @@ a{
         background-color: black;
         color: white;
         font-size: 16px;
-    }
-    .umayLike{
-        width: fit-content;
-        transform: translate(35px, 280px);
     }
     .heart{
         width: fit-content;
@@ -470,7 +462,7 @@ a{
         width: 100% !important;
         height: 300px !important;
         border-radius: 8px;
-        transform: translate(-2px, -3px);
+        transform: translate(1px, 3px);
       }
     .header-buttons:hover{
         background-color: black;
@@ -584,7 +576,8 @@ a{
         width: fit-content;
         font-size: 26px !important;
         font-weight: bold !important;
-        margin-top: 35px !important;
+        margin-top: 300px !important;
+        transform: translateX(32px);
         margin-bottom: 20px !important;
     }
     .prod{
@@ -650,10 +643,6 @@ a{
         background-color: black;
         color: white;
         font-size: 16px;
-    }
-    .umayLike{
-        width: fit-content;
-        transform: translate(55px, 261px);
     }
     .heart{
         width: fit-content;
@@ -839,7 +828,7 @@ a{
         width: 100% !important;
         height: 300px !important;
         border-radius: 8px;
-        transform: translate(-2px, -3px);
+        transform: translate(1px, 3px);
       }
     .header-buttons:hover{
         background-color: black;
@@ -924,7 +913,8 @@ a{
         width: fit-content;
         font-size: 26px !important;
         font-weight: bold !important;
-        margin-top: 35px !important;
+        margin-top: 300px !important;
+        transform: translateX(32px);
         margin-bottom: 20px !important;
     }
     .prod{
@@ -991,10 +981,6 @@ a{
         background-color: black;
         color: white;
         font-size: 16px;
-    }
-    .umayLike{
-        width: fit-content;
-        transform: translate(55px, 261px);
     }
     .heart{
         width: fit-content;
@@ -1179,7 +1165,7 @@ a{
         width: 100% !important;
         height: 300px !important;
         border-radius: 8px;
-        transform: translate(-2px, -3px);
+        transform: translate(1px, 3px);
       }
     .header-buttons:hover{
         background-color: black;
@@ -1264,7 +1250,8 @@ a{
         width: fit-content;
         font-size: 26px !important;
         font-weight: bold !important;
-        margin-top: 35px !important;
+        margin-top: 300px !important;
+        transform: translateX(32px);
         margin-bottom: 20px !important;
     }
     .prod{
@@ -1331,10 +1318,6 @@ a{
         background-color: black;
         color: white;
         font-size: 16px;
-    }
-    .umayLike{
-        width: fit-content;
-        transform: translate(55px, 261px);
     }
     .heart{
         width: fit-content;
@@ -1502,7 +1485,8 @@ a{
         overflow-x: auto;
         gap: 1rem;
         padding: 1rem;
-        scroll-behavior: smooth;
+        scroll-behavior: initial;
+        transition: scroll-behavior 0.3s ease;
       }
       .carousel-container::-webkit-scrollbar {
         display: none; 
@@ -1519,7 +1503,7 @@ a{
         width: 100% !important;
         height: 300px !important;
         border-radius: 8px;
-        transform: translate(-2px, -3px);
+        transform: translate(1px, 3px);
       }
     .seperate{
         display: flex !important;
@@ -1639,7 +1623,8 @@ a{
         width: fit-content;
         font-size: 26px !important;
         font-weight: bold !important;
-        margin-top: 35px !important;
+        margin-top: 300px !important;
+        transform: translateX(32px);
         margin-bottom: 20px !important;
     }
     .prod{
@@ -1706,10 +1691,6 @@ a{
         background-color: black;
         color: white;
         font-size: 16px;
-    }
-    .umayLike{
-        width: fit-content;
-        transform: translate(55px, 261px);
     }
     .heart{
         width: fit-content;
